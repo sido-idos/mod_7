@@ -1,5 +1,43 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
-<h2>Bienvenido a Alke Wallet</h2>
+
+<div class="container my-5 text-center">
+    <h2>Bienvenido a <strong>MiBilletera</strong></h2>
+    <p>Gestiona tu dinero digital de manera rápida, segura y sencilla.</p>
+    <p>Explora tus <strong>Usuarios</strong>, realiza <strong>Operaciones</strong> y accede a las herramientas de <strong>Admin</strong>.</p>
+</div>
+
+<div class="container my-5">
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card text-center">
+                <h3>Usuarios</h3>
+                <p>Administra las cuentas de tus usuarios, revisa perfiles y controla accesos.</p>
+                <img src="{% static 'img/usuarios.png' %}" alt="Usuarios">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <h3>Operaciones</h3>
+                <p>Realiza transferencias, pagos y consulta el historial de transacciones de manera segura.</p>
+                <img src="{% static 'img/operaciones_billetera.png' %}" alt="Operaciones">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-center">
+                <h3>Administra</h3>
+                <p>Accede a herramientas de administración avanzada para gestionar la plataforma y permisos.</p>
+                <img src="{% static 'img/admin.jpg' %}" alt="Admin">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5 text-center">
+    <h3>Empieza hoy mismo</h3>
+    <p>Regístrate en segundos y gestiona tu dinero digital con confianza.</p>
+</div>
 {% endblock %}

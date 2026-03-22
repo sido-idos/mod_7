@@ -1,17 +1,40 @@
 {% extends 'base.html' %}
 
+{% block title %}Usuarios - MiBilletera{% endblock %}
+
 {% block content %}
-<h2>Usuarios</h2>
+<div class="container my-4 d-flex flex-column align-items-center">
 
-<a href="/usuarios/crear/">Crear usuario</a>
+    <div class="d-flex justify-content-between align-items-center mb-3 w-75">
+        <h2>Usuarios</h2>
+        <a href="{% url 'crear_usuario' %}" class="btn btn-success btn-sm">Crear Usuario</a>
+    </div>
 
-<ul>
-{% for u in usuarios %}
-    <li>
-        {{ u.nombre }} - {{ u.email }} - ${{ u.saldo }}
-        <a href="/usuarios/editar/{{ u.id }}">Editar</a>
-        <a href="/usuarios/eliminar/{{ u.id }}">Eliminar</a>
-    </li>
-{% endfor %}
-</ul>
+    <div class="table-responsive w-75">
+        <table class="table table-dark table-striped table-hover text-center mb-0">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Saldo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for u in usuarios %}
+                <tr>
+                    <td>{{ u.nombre }}</td>
+                    <td>{{ u.email }}</td>
+                    <td>${{ u.saldo }}</td>
+                    <td>
+                        <a href="{% url 'editar_usuario' u.pk %}" class="btn btn-primary btn-sm me-1">Editar</a>
+                        <a href="{% url 'eliminar_usuario' u.pk %}" class="btn btn-danger btn-sm">Eliminar</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
 {% endblock %}

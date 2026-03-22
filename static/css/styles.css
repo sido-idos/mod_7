@@ -1,0 +1,133 @@
+/* ===================================
+   RESET Y FLEX PARA FOOTER STICKY
+   =================================== */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #262626;
+    color: #E0E0E0; /* Color general del texto fuera de tarjetas */
+    font-family: Arial, sans-serif;
+}
+
+main {
+    flex: 1; /* Ocupa todo el espacio disponible */
+}
+
+footer {
+    flex-shrink: 0; /* Siempre al final */
+}
+
+/* ===================================
+   HEADER
+   =================================== */
+header {
+    background-color: #2E4B3C;
+    padding: 15px;
+    border-radius: 5px;
+    color: #E0E0E0;
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* ===================================
+   NAVBAR
+   =================================== */
+.navbar {
+    background-color: #3C1E4D !important;
+}
+
+.navbar-nav .nav-link {
+    color: #FFFFFF !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #BFA0FF !important;
+}
+
+/* ===================================
+   TARJETAS
+   =================================== */
+.card {
+    background-color: #2E4B3C;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #BFA0FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card img {
+    border-radius: 5px;
+    width: 200px;
+    height: 200px;
+}
+
+.card h2, .card h3, .card p {
+    color: #BFA0FF;
+}
+
+/* ===================================
+   CONTENIDO GENERAL FUERA DE TARJETAS
+   =================================== */
+main h2, main h3, main p, main li, main a, main ul {
+    color: #E0E0E0 !important; /* Textos legibles sobre fondo gris oscuro */
+}
+
+main a {
+    text-decoration: underline;
+}
+
+li a {
+    color: #BFA0FF !important; /* Links dentro de listas */
+}
+
+li a:hover {
+    color: #FFFFFF !important;
+}
+
+/* ===================================
+   FOOTER
+   =================================== */
+footer {
+    background-color: #2E4B3C;
+    color: #E0E0E0;
+    padding: 15px 0;
+    text-align: center;
+}
+
+footer a {
+    color: #BFA0FF !important;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #FFFFFF !important;
+    text-decoration: underline;
+}
+
+/* ===================================
+   OTROS ELEMENTOS
+   =================================== */
+h2, h3, h4, p {
+    margin: 0 0 10px 0;
+}
+
+ul {
+    padding-left: 20px;
+}
