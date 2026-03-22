@@ -4,7 +4,6 @@ from .forms import UsuarioForm, OperacionForm
 
 # Create your views here.
 
-# -------- USUARIOS --------
 def lista_usuarios(request):
     nombre = ''
     if request.method == 'POST':
@@ -33,9 +32,6 @@ def eliminar_usuario(request, pk):
     usuario = get_object_or_404(Usuario, pk=pk)
     usuario.delete()
     return redirect('lista_usuarios')
-
-
-# -------- OPERACIONES --------
 
 def lista_operaciones(request):
     usuario_q = ''

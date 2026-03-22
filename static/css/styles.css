@@ -1,6 +1,3 @@
-/* ===================================
-   RESET Y FLEX PARA FOOTER STICKY
-   =================================== */
 html, body {
     height: 100%;
     margin: 0;
@@ -12,21 +9,18 @@ body {
     flex-direction: column;
     min-height: 100vh;
     background-color: #262626;
-    color: #E0E0E0; /* Color general del texto fuera de tarjetas */
+    color: #E0E0E0;
     font-family: Arial, sans-serif;
 }
 
 main {
-    flex: 1; /* Ocupa todo el espacio disponible */
+    flex: 1;
 }
 
 footer {
-    flex-shrink: 0; /* Siempre al final */
+    flex-shrink: 0;
 }
 
-/* ===================================
-   HEADER
-   =================================== */
 header {
     background-color: #2E4B3C;
     padding: 15px;
@@ -41,9 +35,6 @@ header img {
     margin-right: 10px;
 }
 
-/* ===================================
-   NAVBAR
-   =================================== */
 .navbar {
     background-color: #3C1E4D !important;
 }
@@ -56,9 +47,6 @@ header img {
     color: #BFA0FF !important;
 }
 
-/* ===================================
-   TARJETAS
-   =================================== */
 .card {
     background-color: #2E4B3C;
     border-radius: 8px;
@@ -81,11 +69,8 @@ header img {
     color: #BFA0FF;
 }
 
-/* ===================================
-   CONTENIDO GENERAL FUERA DE TARJETAS
-   =================================== */
 main h2, main h3, main p, main li, main a, main ul {
-    color: #E0E0E0 !important; /* Textos legibles sobre fondo gris oscuro */
+    color: #E0E0E0 !important;
 }
 
 main a {
@@ -93,16 +78,13 @@ main a {
 }
 
 li a {
-    color: #BFA0FF !important; /* Links dentro de listas */
+    color: #BFA0FF !important;
 }
 
 li a:hover {
     color: #FFFFFF !important;
 }
 
-/* ===================================
-   FOOTER
-   =================================== */
 footer {
     background-color: #2E4B3C;
     color: #E0E0E0;
@@ -121,9 +103,6 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* ===================================
-   OTROS ELEMENTOS
-   =================================== */
 h2, h3, h4, p {
     margin: 0 0 10px 0;
 }

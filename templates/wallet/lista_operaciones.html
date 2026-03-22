@@ -7,7 +7,6 @@
 
     <h2>Operaciones</h2>
 
-    <!-- Filtros con POST y labels -->
     <div class="d-flex justify-content-between align-items-center mb-3 w-75">
         <form method="post" class="d-flex align-items-center">
             {% csrf_token %}
@@ -20,12 +19,9 @@
             <button type="submit" class="btn btn-primary btn-sm me-2">Filtrar</button>
             <a href="{% url 'lista_operaciones' %}" class="btn btn-secondary btn-sm">Limpiar</a>
         </form>
-
-        <!-- Botón nueva operación -->
         <a href="{% url 'crear_operacion' %}" class="btn btn-success btn-sm">Nueva Operación</a>
     </div>
 
-    <!-- Tabla de operaciones -->
     <div class="table-responsive w-75">
         <table class="table table-dark table-striped table-hover text-center mb-0">
             <thead>
