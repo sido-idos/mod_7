@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Usuarios</h2>
+
+<a href="/usuarios/crear/">Crear usuario</a>
+
+<ul>
+{% for u in usuarios %}
+    <li>
+        {{ u.nombre }} - {{ u.email }} - ${{ u.saldo }}
+        <a href="/usuarios/editar/{{ u.id }}">Editar</a>
+        <a href="/usuarios/eliminar/{{ u.id }}">Eliminar</a>
+    </li>
+{% endfor %}
+</ul>
+{% endblock %}

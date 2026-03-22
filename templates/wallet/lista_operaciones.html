@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Operaciones</h2>
+
+<a href="/operaciones/crear/">Nueva operación</a>
+
+<ul>
+{% for op in operaciones %}
+    <li>
+        {{ op.usuario.nombre }} - {{ op.tipo }} - ${{ op.monto }} - {{ op.fecha }}
+    </li>
+{% endfor %}
+</ul>
+{% endblock %}
