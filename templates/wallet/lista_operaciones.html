@@ -5,11 +5,27 @@
 {% block content %}
 <div class="container my-4 d-flex flex-column align-items-center">
 
+    <h2>Operaciones</h2>
+
+    <!-- Filtros con POST y labels -->
     <div class="d-flex justify-content-between align-items-center mb-3 w-75">
-        <h2>Operaciones</h2>
+        <form method="post" class="d-flex align-items-center">
+            {% csrf_token %}
+            <label for="usuario_filter" class="me-2 text-light">Usuario:</label>
+            <input type="text" id="usuario_filter" name="usuario" class="form-control form-control-sm me-2" placeholder="Usuario" value="{{ usuario_q }}">
+
+            <label for="tipo_filter" class="me-2 text-light">Tipo:</label>
+            <input type="text" id="tipo_filter" name="tipo" class="form-control form-control-sm me-2" placeholder="Tipo de operación" value="{{ tipo_q }}">
+
+            <button type="submit" class="btn btn-primary btn-sm me-2">Filtrar</button>
+            <a href="{% url 'lista_operaciones' %}" class="btn btn-secondary btn-sm">Limpiar</a>
+        </form>
+
+        <!-- Botón nueva operación -->
         <a href="{% url 'crear_operacion' %}" class="btn btn-success btn-sm">Nueva Operación</a>
     </div>
 
+    <!-- Tabla de operaciones -->
     <div class="table-responsive w-75">
         <table class="table table-dark table-striped table-hover text-center mb-0">
             <thead>
@@ -27,6 +43,10 @@
                     <td>{{ op.tipo }}</td>
                     <td>${{ op.monto }}</td>
                     <td>{{ op.fecha }}</td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="4">No se encontraron operaciones.</td>
                 </tr>
                 {% endfor %}
             </tbody>
